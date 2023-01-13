@@ -1,6 +1,3 @@
-function add(number1, number2) {
-  return number1 + number2;
-}
 
 function handleSelect(event) {
   event.preventDefault();
@@ -11,30 +8,39 @@ function handleSelect(event) {
   const input5 = parseInt(document.getElementById("select-event").value);
   
   let output;
-  //  = document.getElementById("output")
-  let totalValue = ((((input1 + input2) + input3) + input4) + input5)
-  // parseInt(add(parseInt(input1), parseInt(input2), parseInt(input3), parseInt(input4), parseInt(input5)));
+  let totalValue = ((((input1 + input2) + input3) + input4) + input5);
 
-  if (parseInt(totalValue) <= 5) {
-    document.querySelector("p#Java").removeAttribute("class");
+  if (!input1 || !input2 || !input3 || !input4 || !input5) {
+    output = "Error"
+    document.querySelector("p#error").removeAttribute("class", "hidden");
+    document.querySelector("p#Java").setAttribute("class", "hidden");
     document.querySelector("p#python").setAttribute("class", "hidden");
     document.querySelector("p#C").setAttribute("class", "hidden");
-    output = "JavaScript";
+  } else {
 
-  } else if (parseInt(totalValue) > 5 && totalValue <= 10) {
-    document.querySelector("p#Java").setAttribute("class", "hidden");
-    document.querySelector("p#python").removeAttribute("class");
-    document.querySelector("p#C").setAttribute("class","hidden");
-    output = "Python";
+    if (totalValue === 5) {
+      output = "JavaScript";
+      document.querySelector("p#Java").removeAttribute("class");
+      document.querySelector("p#python").setAttribute("class", "hidden");
+      document.querySelector("p#C").setAttribute("class", "hidden");
+      document.querySelector("p#error").setAttribute("class", "hidden");
+    } else if (totalValue > 5 && totalValue <= 10) {
+      output = "Python";
+      document.querySelector("p#Java").setAttribute("class", "hidden");
+      document.querySelector("p#python").removeAttribute("class");
+      document.querySelector("p#C").setAttribute("class","hidden");
+      document.querySelector("p#error").setAttribute("class", "hidden");
 
-  } else if (totalValue > 10) {
-    output = "C++"
-    document.querySelector("p#Java").setAttribute("class", "hidden");
-    document.querySelector("p#python").setAttribute("class", "hidden");
-    document.querySelector("p#C").removeAttribute("class");
-  } 
+    } else if (totalValue > 10 && totalValue <= 15) {
+      output = "C++";
+      document.querySelector("p#Java").setAttribute("class", "hidden");
+      document.querySelector("p#python").setAttribute("class", "hidden");
+      document.querySelector("p#C").removeAttribute("class");
+      document.querySelector("p#error").setAttribute("class", "hidden");
+    } 
+  }
 
-  document.getElementById("output").innerText = output
+  document.getElementById("output").innerText = output;
 }
 
 window.addEventListener("load", function() {
