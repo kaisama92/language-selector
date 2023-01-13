@@ -9,4 +9,19 @@ function handleSelect(event) {
   const input3 = parseInt(document.getElementById("select-animal ").value);
   const input4 = parseInt(document.getElementById("select-shoe"));
   const input5 = parseInt(document.getElementById("select-event"));
+  
+  let output = document.getElementById("output")
+  let totalValue = parseInt(add(input1, input2, input3, input4, input5));
+
+  if (totalValue <= 5) {
+    output = "JavaScript"
+  } else if (totalValue > 5 && totalValue <= 10) {
+    output = "Python"
+  } else if (totalValue > 10) {
+    output = "C++"
+  }
 }
+
+window.addEventListener("load", function() {
+  this.document.getElementById("select-form").addEventListener("submit", handleSelect);
+})
