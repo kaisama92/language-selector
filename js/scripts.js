@@ -32,7 +32,7 @@ function handleSelect(event) {
     document.querySelector("p#Java").setAttribute("class", "hidden");
     document.querySelector("p#python").setAttribute("class", "hidden");
     document.querySelector("p#C").removeAttribute("class");
-  }
+  } 
 
   document.getElementById("output").innerText = output
 }
