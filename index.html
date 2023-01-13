@@ -11,48 +11,51 @@
 <!-- // C#, Javascript, Python, Swift -->
 
 <body>
-  <h1>Let's Learn a new language!</h1>
-  <h5>By: Kai Clausen</h5>
-  <h2>Javascript, Python, and C++</h2>
-  <p>There are many different programming languages, and they all have their uses. Some of these languages are best suited for data oriented work, while others are better for web and software design. It's important to find what language you should be using for your project, so I created a brief survey to help you decide.</p>
-  <form id="select-form">
-    <label for="select-beverage">Choose a Beverage</label>
-    <select id="select-beverage">
-      <option value="0">Select One</option>
-      <option value="1">Coffee</option>
-      <option value="2">Water</option>
-      <option value="3">Energy Drinks</option>
-    </select>
-    <label for="select-car">Choose a Car</label>
-    <select id="select-car">
-      <option value="0">Select One</option>
-      <option value="1">Volkswagen Bug</option>
-      <option value="2">Toyota Prius</option>
-      <option value="3">Mazda Miata</option>
-    </select>
-    <label for="select-animal">Choose an Animal</label>
-    <select id="select-animal">
-      <option value="0">Select One</option>
-      <option value="1">Cat</option>
-      <option value="2">Snake</option>
-      <option value="3">Dog</option>
-    </select>
-    <label for="select-shoe">Select a Shoe</label>
-    <select id="select-shoe">
-      <option value="0">Select One</option>
-      <option value="1">Birkenstocks</option>
-      <option value="2">New Balance</option>
-      <option value="3">Jordan's</option>
-    </select>
-    <label for="select-event">Select an Event</label>
-    <select id="select-event">
-      <option value="0">Select One</option>
-      <option value="1">Paint and Sip</option>
-      <option value="2">Book Signing</option>
-      <option value="3">Party</option>
-    </select>
-    <button type="submit">Submit</button>
-  </form>
+  <h1 class="centered">Let's Learn a new language!</h1>
+  <h5 class="centered">By: Kai Clausen</h5>
+  <h2 class="centered">Javascript, Python, and C++</h2>
+  <p class="centered">There are many different programming languages, and they all have their uses. Some of these languages are best suited for data oriented work, while others are better for web and software design. It's important to find what language you should be using for your project, so I created a brief survey to help you decide.</p>
+  
+  <div class="form-box">
+    <form id="select-form">
+      <label for="select-beverage">Choose a Beverage</label>
+      <select id="select-beverage">
+        <option value="0">Select One</option>
+        <option value="1">Coffee</option>
+        <option value="2">Water</option>
+        <option value="3">Energy Drinks</option>
+      </select>
+      <label for="select-car">Choose a Car</label>
+      <select id="select-car">
+        <option value="0">Select One</option>
+        <option value="1">Volkswagen Bug</option>
+        <option value="2">Toyota Prius</option>
+        <option value="3">Mazda Miata</option>
+      </select>
+      <label for="select-animal">Choose an Animal</label>
+      <select id="select-animal">
+        <option value="0">Select One</option>
+        <option value="1">Cat</option>
+        <option value="2">Snake</option>
+        <option value="3">Dog</option>
+      </select>
+      <label for="select-shoe">Select a Shoe</label>
+      <select id="select-shoe">
+        <option value="0">Select One</option>
+        <option value="1">Birkenstocks</option>
+        <option value="2">New Balance</option>
+        <option value="3">Jordan's</option>
+      </select>
+      <label for="select-event">Select an Event</label>
+      <select id="select-event">
+        <option value="0">Select One</option>
+        <option value="1">Paint and Sip</option>
+        <option value="2">Book Signing</option>
+        <option value="3">Party</option>
+      </select>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
 
   <h3>Result</h3>
   <h4 id="output"></h4>
