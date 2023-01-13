@@ -16,12 +16,22 @@ function handleSelect(event) {
   // parseInt(add(parseInt(input1), parseInt(input2), parseInt(input3), parseInt(input4), parseInt(input5)));
 
   if (parseInt(totalValue) <= 5) {
-    output = "JavaScript"
-    console.log("What da hell")
+    document.querySelector("p#Java").removeAttribute("class");
+    document.querySelector("p#python").setAttribute("class", "hidden");
+    document.querySelector("p#C").setAttribute("class", "hidden");
+    output = "JavaScript";
+
   } else if (parseInt(totalValue) > 5 && totalValue <= 10) {
-    output = "Python"
+    document.querySelector("p#Java").setAttribute("class", "hidden");
+    document.querySelector("p#python").removeAttribute("class");
+    document.querySelector("p#C").setAttribute("class","hidden");
+    output = "Python";
+
   } else if (totalValue > 10) {
     output = "C++"
+    document.querySelector("p#Java").setAttribute("class", "hidden");
+    document.querySelector("p#python").setAttribute("class", "hidden");
+    document.querySelector("p#C").removeAttribute("class");
   }
 
   document.getElementById("output").innerText = output
