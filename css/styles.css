@@ -33,3 +33,14 @@ body {
   background-color: red;
   border: 5px solid black;
 }
+
+.sticky {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: grey;
+  color: black;
+  text-align: center;
+  padding: 5px 0px;
+}
