@@ -7,11 +7,11 @@ function handleSelect(event) {
   const input4 = parseInt(document.getElementById("select-shoe").value);
   const input5 = parseInt(document.getElementById("select-event").value);
   
-  const userName = toString(document.getElementById("person1").value);
+  const userName = document.getElementById("person1").value;
 
   let output;
   let totalValue = ((((input1 + input2) + input3) + input4) + input5);
-
+console.log(userName)
   if (!input1 || !input2 || !input3 || !input4 || !input5) {
     output = "Error";
     document.querySelector("p#error").removeAttribute("class", "hidden");
@@ -45,7 +45,10 @@ function handleSelect(event) {
 
   document.getElementById("output").innerText = output;
   console.log("Why isn't this working")
-  document.getElementById("span#name1").innerText = userName
+  document.querySelector("span#name1").innerText =  userName
+  document.querySelector("span#name2").innerText = userName
+  document.querySelector("span#name3").innerText = userName
+  console.log(userName)
 }
 
 window.addEventListener("load", function() {
