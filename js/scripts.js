@@ -7,11 +7,13 @@ function handleSelect(event) {
   const input4 = parseInt(document.getElementById("select-shoe").value);
   const input5 = parseInt(document.getElementById("select-event").value);
   
+  const userName = toString(document.getElementById("person1").value);
+
   let output;
   let totalValue = ((((input1 + input2) + input3) + input4) + input5);
 
   if (!input1 || !input2 || !input3 || !input4 || !input5) {
-    output = "Error"
+    output = "Error";
     document.querySelector("p#error").removeAttribute("class", "hidden");
     document.querySelector("p#Java").setAttribute("class", "hidden");
     document.querySelector("p#python").setAttribute("class", "hidden");
@@ -33,6 +35,7 @@ function handleSelect(event) {
 
     } else if (totalValue > 10 && totalValue <= 15) {
       output = "C++";
+
       document.querySelector("p#Java").setAttribute("class", "hidden");
       document.querySelector("p#python").setAttribute("class", "hidden");
       document.querySelector("p#C").removeAttribute("class");
@@ -41,6 +44,8 @@ function handleSelect(event) {
   }
 
   document.getElementById("output").innerText = output;
+  console.log("Why isn't this working")
+  document.getElementById("span#name1").innerText = userName
 }
 
 window.addEventListener("load", function() {
