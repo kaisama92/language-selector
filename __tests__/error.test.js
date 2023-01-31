@@ -13,4 +13,11 @@ describe('isError', () => {
     const error = isError(input1);
     expect(error).toEqual(false);
   });
+
+  test('should determine if either input1 or input2 are not numbers', () => {
+    let input1 = 0;
+    let input2 = 1;
+    const error = isError(input1, input2);
+    expect(error).toEqual(true);
+  });
 })
